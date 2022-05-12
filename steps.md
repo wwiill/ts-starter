@@ -1,24 +1,34 @@
+# Initialisation
+```bash
 mkdir src test
-
 npm init -y
+```
+
+# Install TypeScript and types for Nodejs e.g. file, path, process
+```bash
 npm install typescript --save-dev
-
-# Nodejs types for TypeScript e.g. file, path, process
 npm install @types/node --save-dev
+```
 
-# create tsconfig.json
+# Create tsconfig.json
+```bash
 npx tsc --init --rootDir src --outDir build \
 --esModuleInterop --resolveJsonModule --lib es6 \
 --module commonjs --allowJs true --noImplicitAny true
+```
 
-# ts-node runs TypeScript code directly without transpiling to js
+# ts-node to run TypeScript code directly without transpiling to js
+```bash
 npm install ts-node --save-dev
+```
 
 # Testing - jest, ts-jest and types
+```bash
 npm install jest ts-jest @types/jest --save-dev
+```
 
 ## create jest.config.js
-```
+```js
 module.exports = {
     globals: {
         'ts-jest': {
